@@ -1,4 +1,4 @@
-import React, {useRef, useCallback, useState} from "react"
+import React, {useRef, useCallback, useState, useEffect} from "react"
 import { Link } from "gatsby"
 import {useSpring} from 'react-spring/three'
 import Background from "../components/background"
@@ -12,6 +12,7 @@ import SEO from "../components/seo"
 
 function IndexPage(){
   const [section, setSection] = useState(0)
+  const [offset, setOffset] = useState(0)
   const [colorArray, setColorArray] = useState(['#000f42', '#002828'])
   const {color} = useSpring({color:colorArray[section]})
   
@@ -30,13 +31,17 @@ function IndexPage(){
 
   const mouse = useRef([0, 0])
   const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), [])
+
+  useEffect(() => {
+    setOffset(window.innerHeight / 2)
+  }, [window])
   
 return(
   <div onMouseMove={onMouseMove}>
     <Layout>
       <SEO title="Home" />
       <Background mouse={mouse} color={color}/>
-      <VisibilitySensor onChange={visibleFirstSection} offset={{bottom:(window.innerHeight/2), top:(window.innerHeight/2)}} partialVisibility={true}>
+      <VisibilitySensor onChange={visibleFirstSection} offset={{bottom:offset, top:offset}} partialVisibility={true}>
         <Section id='home'>
           <div class='centered'>
             <h1>THIS IS SAMPLE TEXT.</h1>
@@ -50,7 +55,7 @@ return(
           </div>
         </Section>
       </VisibilitySensor>
-      <VisibilitySensor partialVisibility={true} offset={{bottom:(window.innerHeight/2), top:(window.innerHeight/2)}}  onChange={visibleSecondSection}>
+      <VisibilitySensor partialVisibility={true} offset={{bottom:offset, top:offset}}  onChange={visibleSecondSection}>
         <Section id='about' style={{flexDirection:'row',alignItems:'flex-start', paddingTop:'20vh'}}>
           <div className='centered' style={{width:"30vw"}}>
             <h1>THIS IS SAMPLE TEXT.</h1>
