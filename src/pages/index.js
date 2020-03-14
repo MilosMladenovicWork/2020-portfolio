@@ -34,7 +34,7 @@ function IndexPage(){
 
   useEffect(() => {
     setOffset(window.innerHeight / 2)
-  }, [window])
+  }, [])
   
 return(
   <div onMouseMove={onMouseMove}>
