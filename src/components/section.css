@@ -1,0 +1,44 @@
+section{
+  padding:0 12vw;
+  width:76vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height:100vh;
+  position: relative;
+  border:1px solid transparent;
+}
+
+section h1{
+  font-size:72px;
+}
+
+section p{
+  margin-bottom:10px;
+}
+
+.centered{
+  width:50vw;
+}
+
+.scroll-down{
+  position:absolute;
+  bottom:0;
+}
+
+.technologies{
+  width:30vw;
+  margin-left:5vw;
+  display:flex;
+  align-items: flex-start;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+
+.technology{
+  margin-bottom:3vw;
+  width:26%;
+  height:7.5vw;
+  border:3px solid lightblue;
+}

@@ -23,24 +23,44 @@ const Layout = ({ children }) => {
     }
   `)
 
+
+
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+    <div style={{overflowX:'hidden'}}>
+      <div>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <a href='#home'>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href='#about'>
+                  About Me
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  Projects
+                </a>              
+              </li>
+              <li>
+                <a href='#'>
+                  Contact Me
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <main>{children}</main>
+          <footer>
+            © {new Date().getFullYear()} Milos Mladenovic
+          </footer>
+        </div>
       </div>
-    </>
+    </div>
   )
 }
 
