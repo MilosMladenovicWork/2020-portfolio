@@ -1,21 +1,54 @@
 import React, {useRef, useCallback, useState, useEffect} from "react"
 import { Link } from "gatsby"
-import {useSpring} from 'react-spring/three'
+import {useSpring as useSpringThree} from 'react-spring/three'
 import Background from "../components/background"
 import Section from "../components/section"
 import Button from "../components/button"
+import Projects from '../components/projects'
 import VisibilitySensor from 'react-visibility-sensor'
+import 'swiper/css/swiper.css'
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+import testImage from "../images/test.jpg"
 import SEO from "../components/seo"
 
 function IndexPage(){
   const [section, setSection] = useState(0)
   const [offset, setOffset] = useState(0)
-  const [colorArray, setColorArray] = useState(['#000f42', '#002828'])
-  const {color} = useSpring({color:colorArray[section]})
-  
+  const [colorArray, setColorArray] = useState(['#010029', '#400000', '#1d0024'])
+  const {color} = useSpringThree({color:colorArray[section]})
+
+
+
+
+  const projects = [
+    {
+      image:testImage
+    },{
+      image:testImage
+    },{
+      image:testImage
+    },{
+      image:testImage
+    },{
+      image:testImage
+    },{
+      image:testImage
+    },{
+      image:testImage
+    },{
+      image:testImage
+    },{
+      image:testImage
+    },{
+      image:testImage
+    },{
+      image:testImage
+    },{
+      image:testImage
+    },
+  ]
+
   function visibleFirstSection (isVisible) {
     if(isVisible){
       setSection(0)
@@ -27,6 +60,13 @@ function IndexPage(){
       setSection(1)
     }
     console.log('Element 2 is now %s', isVisible ? 'visible' : 'hidden');
+  }
+
+  function visibleThirdSection (isVisible) {
+    if(isVisible){
+      setSection(2)
+    }
+    console.log('Element 3 is now %s', isVisible ? 'visible' : 'hidden');
   }
 
   const mouse = useRef([0, 0])
@@ -56,7 +96,7 @@ return(
         </Section>
       </VisibilitySensor>
       <VisibilitySensor partialVisibility={true} offset={{bottom:offset, top:offset}}  onChange={visibleSecondSection}>
-        <Section id='about' style={{flexDirection:'row',alignItems:'flex-start', paddingTop:'20vh'}}>
+        <Section id='about' style={{flexDirection:'row',alignItems:'flex-start',justifyContent:'space-between', paddingTop:'20vh'}}>
           <div className='centered' style={{width:"30vw"}}>
             <h1>THIS IS SAMPLE TEXT.</h1>
             <p>This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. 
@@ -99,6 +139,14 @@ return(
               
             </div>
           </div>
+        </Section>
+      </VisibilitySensor>
+      <VisibilitySensor partialVisibility={true} offset={{bottom:offset, top:offset}}  onChange={visibleThirdSection}>
+        <Section id='projects' style={{flexDirection:'column', justifyContent:'flex-start',alignItems:'flex-start', paddingTop:'20vh'}}>
+              <h1 style={{marginBottom:'10vh'}}>THIS IS SAMPLE TEXT.</h1>
+              <div style={{width:'100%'}}>
+                <Projects projects={projects}/>
+              </div>
         </Section>
       </VisibilitySensor>
       <Link to="/page-2/">Go to page 2</Link>

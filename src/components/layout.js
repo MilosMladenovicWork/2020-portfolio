@@ -43,12 +43,12 @@ const Layout = ({ children }) => {
                 </a>
               </li>
               <li>
-                <a href='#'>
+                <a href='#projects'>
                   Projects
                 </a>              
               </li>
               <li>
-                <a href='#'>
+                <a href='#contact'>
                   Contact Me
                 </a>
               </li>

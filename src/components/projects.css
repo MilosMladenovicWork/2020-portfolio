@@ -1,0 +1,17 @@
+.project{
+  display:flex;
+  padding-top:5vh; 
+  padding-bottom:5vh;
+  justify-content:center;
+  align-items:center;
+  perspective: 600px;
+}
+
+.project img{
+  width:100%;
+  display:inline-block;
+}
+
+.swiper-slide{
+  width:40% !important;
+}
