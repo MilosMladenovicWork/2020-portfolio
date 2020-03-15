@@ -15,6 +15,7 @@ function Projects({projects}){
     initialSlide:0,
     centeredSlides:true,
     spaceBetween:150,
+    grabCursor:true,
     on:{
       slideChange:function(){
         setActive(this.activeIndex)
@@ -36,6 +37,7 @@ function Projects({projects}){
         onMouseMove={function({clientX:x,clientY:y}){active === index && set({transform:`scale(1.2) rotateX(${-(y - window.innerHeight / 2) / 10}deg) rotateY(${(x - window.innerWidth / 2)/10}deg)`}); console.log(x)}}
         >
         <img src={project.image}/>
+        <p>{project.name}</p>
       </animated.div>)
     }
   </Swiper>

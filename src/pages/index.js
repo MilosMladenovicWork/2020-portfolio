@@ -23,29 +23,41 @@ function IndexPage(){
 
   const projects = [
     {
-      image:testImage
+      image:testImage,
+      name:'project'
     },{
-      image:testImage
+      image:testImage,
+      name:'project'
     },{
-      image:testImage
+      image:testImage,
+      name:'project'
     },{
-      image:testImage
+      image:testImage,
+      name:'project'
     },{
-      image:testImage
+      image:testImage,
+      name:'project'
     },{
-      image:testImage
+      image:testImage,
+      name:'project'
     },{
-      image:testImage
+      image:testImage,
+      name:'project'
     },{
-      image:testImage
+      image:testImage,
+      name:'project'
     },{
-      image:testImage
+      image:testImage,
+      name:'project'
     },{
-      image:testImage
+      image:testImage,
+      name:'project'
     },{
-      image:testImage
+      image:testImage,
+      name:'project'
     },{
-      image:testImage
+      image:testImage,
+      name:'project'
     },
   ]
 
