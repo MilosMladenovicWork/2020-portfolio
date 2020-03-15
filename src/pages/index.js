@@ -15,7 +15,7 @@ import SEO from "../components/seo"
 function IndexPage(){
   const [section, setSection] = useState(0)
   const [offset, setOffset] = useState(0)
-  const [colorArray, setColorArray] = useState(['#010029', '#400000', '#1d0024'])
+  const [colorArray, setColorArray] = useState(['#010029', '#400000', '#000000'])
   const {color} = useSpringThree({color:colorArray[section]})
 
 
