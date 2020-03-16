@@ -100,11 +100,10 @@ return(
       <VisibilitySensor onChange={visibleFirstSection} offset={{bottom:offset, top:offset}} partialVisibility={true}>
         <Section id='home'>
           <div class='centered'>
-            <h1>THIS IS SAMPLE TEXT.</h1>
-            <p>This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. 
-            This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. 
+            <h1>I CREATE STUNNING WEBSITES!</h1>
+            <p>My name is Milos Mladenovic. I am a Front End Web developer with passion in building websites.
             </p>
-            <Button to='#'>See My Work</Button>
+            <Button to='#projects'>See My Work</Button>
           </div>
           <div className='scroll-down'>
             Scroll Down
@@ -114,11 +113,11 @@ return(
       <VisibilitySensor partialVisibility={true} offset={{bottom:offset, top:offset}}  onChange={visibleSecondSection}>
         <Section id='about' style={{flexDirection:'row',alignItems:'flex-start',justifyContent:'space-between', paddingTop:'20vh'}}>
           <div className='centered' style={{width:"30vw"}}>
-            <h1>THIS IS SAMPLE TEXT.</h1>
+            <h1>ABOUT ME</h1>
             <p>This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. 
             This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. 
             </p>
-            <Button to='#'>See My Work</Button>
+            <Button to='#contact'>Contact Me</Button>
           </div>
           <div className='technologies'>
             <div className='technology'>
@@ -159,7 +158,7 @@ return(
       </VisibilitySensor>
       <VisibilitySensor partialVisibility={true} offset={{bottom:offset, top:offset}}  onChange={visibleThirdSection}>
         <Section id='projects' style={{flexDirection:'column', justifyContent:'flex-start',alignItems:'flex-start', paddingTop:'20vh'}}>
-              <h1 style={{marginBottom:'10vh'}}>THIS IS SAMPLE TEXT.</h1>
+              <h1 style={{marginBottom:'10vh'}}>MY PROJECTS</h1>
               <div style={{width:'100%'}}>
                 <Projects projects={projects}/>
               </div>
@@ -168,7 +167,7 @@ return(
       <VisibilitySensor partialVisibility={true} offset={{bottom:offset, top:offset}}  onChange={visibleFourthSection}>
         <Section id='contact' style={{flexDirection:'column', justifyContent:'flex-start',alignItems:'center', paddingTop:'20vh'}}>
           <div className='centered'>
-            <h1 style={{marginBottom:'10vh', textAlign:'center'}}>THIS IS SAMPLE TEXT.</h1>
+            <h1 style={{marginBottom:'10vh', textAlign:'center'}}>CONTACT ME</h1>
             <Form/>
           </div>
         </Section>
