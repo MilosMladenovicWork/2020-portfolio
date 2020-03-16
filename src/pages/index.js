@@ -66,20 +66,17 @@ function IndexPage(){
     if(isVisible){
       setSection(0)
     }
-    console.log('Element 1 is now %s', isVisible ? 'visible' : 'hidden');
   }
   function visibleSecondSection (isVisible) {
     if(isVisible){
       setSection(1)
     }
-    console.log('Element 2 is now %s', isVisible ? 'visible' : 'hidden');
   }
 
   function visibleThirdSection (isVisible) {
     if(isVisible){
       setSection(2)
     }
-    console.log('Element 3 is now %s', isVisible ? 'visible' : 'hidden');
   }
 
   const mouse = useRef([0, 0])
