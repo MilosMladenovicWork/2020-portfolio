@@ -6,7 +6,7 @@ import './projects.css'
 
 
 function Projects({projects}){
-  const [transform, set, stop] = useSpring(()=>({transform:`scale(1) rotateX(0deg) rotateY(0deg)`, config: { mass: 15, tension: 250, friction: 40 }}))
+  const [transform, set, stop] = useSpring(()=>({transform:`scale(1) rotateX(0deg) rotateY(0deg)`, config: { mass: 1, tension: 250, friction: 40 }}))
   const [active, setActive] = useState(0)
   
   

@@ -12,10 +12,11 @@ section{
 
 section h1{
   font-size:72px;
+  margin-bottom:30px;
 }
 
 section p{
-  margin-bottom:10px;
+  margin-bottom:15px;
 }
 
 .centered{
