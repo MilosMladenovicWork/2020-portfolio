@@ -102,7 +102,7 @@ function Form(){
             <input onChange={(e) => changeHandler(e)} type='text' name='name' placeholder='Name'/>
             <input onChange={(e) => changeHandler(e)} type='email' name='email' placeholder='Email'/>
             <textarea onChange={(e) => changeHandler(e)} name='message' placeholder='Message'></textarea>
-            <Button onClick={(e) => clickHandler(e)}>Submit</Button>
+            <Button onClick={clickHandler} style={{display:form.submit ? 'block': 'none'}}>Submit</Button>
         </form>
     )
 }

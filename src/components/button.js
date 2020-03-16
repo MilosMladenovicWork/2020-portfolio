@@ -1,10 +1,10 @@
 import React from 'react'
 import './button.css'
 
-function Button({to:href, children, onClick}){
+function Button({to:href, children, onClick, style}){
 
   return(
-    <a href={href} className="button" onClick={(e) => onClick(e)}>
+    <a href={href} className="button" onClick={(e) => onClick(e)} style={style}>
       {children}
     </a>
   )

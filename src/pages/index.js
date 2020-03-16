@@ -16,7 +16,7 @@ import SEO from "../components/seo"
 function IndexPage(){
   const [section, setSection] = useState(0)
   const [offset, setOffset] = useState(0)
-  const [colorArray, setColorArray] = useState(['#010029', '#400000', '#000000'])
+  const [colorArray, setColorArray] = useState(['#020042', '#020030', '#020020', '#020010'])
   const {color} = useSpringThree({color:colorArray[section]})
 
 
@@ -76,6 +76,12 @@ function IndexPage(){
   function visibleThirdSection (isVisible) {
     if(isVisible){
       setSection(2)
+    }
+  }
+
+  function visibleFourthSection (isVisible) {
+    if(isVisible){
+      setSection(3)
     }
   }
 
@@ -159,8 +165,8 @@ return(
               </div>
         </Section>
       </VisibilitySensor>
-      <VisibilitySensor partialVisibility={true} offset={{bottom:offset, top:offset}}  onChange={visibleThirdSection}>
-        <Section id='projects' style={{flexDirection:'column', justifyContent:'flex-start',alignItems:'center', paddingTop:'20vh'}}>
+      <VisibilitySensor partialVisibility={true} offset={{bottom:offset, top:offset}}  onChange={visibleFourthSection}>
+        <Section id='contact' style={{flexDirection:'column', justifyContent:'flex-start',alignItems:'center', paddingTop:'20vh'}}>
           <div className='centered'>
             <h1 style={{marginBottom:'10vh', textAlign:'center'}}>THIS IS SAMPLE TEXT.</h1>
             <Form/>
