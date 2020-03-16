@@ -22,7 +22,8 @@
     "react-three-fiber": "^4.0.20",
     "react-visibility-sensor": "^5.1.1",
     "swiper": "^5.3.6",
-    "three": "^0.114.0"
+    "three": "^0.114.0",
+    "validate.js": "^0.13.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

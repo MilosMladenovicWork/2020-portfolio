@@ -5,6 +5,7 @@ import Background from "../components/background"
 import Section from "../components/section"
 import Button from "../components/button"
 import Projects from '../components/projects'
+import Form from '../components/form'
 import VisibilitySensor from 'react-visibility-sensor'
 import 'swiper/css/swiper.css'
 
@@ -159,6 +160,14 @@ return(
               <div style={{width:'100%'}}>
                 <Projects projects={projects}/>
               </div>
+        </Section>
+      </VisibilitySensor>
+      <VisibilitySensor partialVisibility={true} offset={{bottom:offset, top:offset}}  onChange={visibleThirdSection}>
+        <Section id='projects' style={{flexDirection:'column', justifyContent:'flex-start',alignItems:'center', paddingTop:'20vh'}}>
+          <div className='centered'>
+            <h1 style={{marginBottom:'10vh', textAlign:'center'}}>THIS IS SAMPLE TEXT.</h1>
+            <Form/>
+          </div>
         </Section>
       </VisibilitySensor>
       <Link to="/page-2/">Go to page 2</Link>

@@ -1,0 +1,25 @@
+form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, textarea{
+    background:none;
+    border:none;
+    border-bottom:3px solid white;
+    width:100%;
+    margin-bottom:30px;
+    color:white;
+    outline:none;
+}
+
+form textarea{
+    min-height:300px;
+    resize:vertical;
+}
+
+form ::placeholder{
+    color:white;
+}
+
