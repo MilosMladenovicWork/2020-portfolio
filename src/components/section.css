@@ -41,5 +41,11 @@ section p{
   margin-bottom:3vw;
   width:26%;
   height:7.5vw;
-  border:3px solid lightblue;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.technology img{
+  object-fit:contain;
 }

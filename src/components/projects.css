@@ -27,3 +27,13 @@
 .swiper-slide-active{
   opacity:1;
 }
+
+.project a{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project a:hover{
+  background: none;
+}

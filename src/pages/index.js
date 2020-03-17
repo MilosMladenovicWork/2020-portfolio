@@ -6,11 +6,18 @@ import Section from "../components/section"
 import Button from "../components/button"
 import Projects from '../components/projects'
 import Form from '../components/form'
+import Technologies from '../components/technologies'
 import VisibilitySensor from 'react-visibility-sensor'
 import 'swiper/css/swiper.css'
 
 import Layout from "../components/layout"
-import testImage from "../images/test.jpg"
+import testImage from "../images/projects/perun.png"
+import perun from '../images/projects/perun.png'
+import movieZone from '../images/projects/moviezone.png'
+import realEstate from '../images/projects/realestate.png'
+import cosmoBakery from '../images/projects/cosmobakery.png'
+import mimsMuscle from '../images/projects/mimsmuscle.png'
+import cozyHut from '../images/projects/cozyhut.png'
 import SEO from "../components/seo"
 
 function IndexPage(){
@@ -24,41 +31,34 @@ function IndexPage(){
 
   const projects = [
     {
-      image:testImage,
-      name:'project'
-    },{
-      image:testImage,
-      name:'project'
-    },{
-      image:testImage,
-      name:'project'
-    },{
-      image:testImage,
-      name:'project'
-    },{
-      image:testImage,
-      name:'project'
-    },{
-      image:testImage,
-      name:'project'
-    },{
-      image:testImage,
-      name:'project'
-    },{
-      image:testImage,
-      name:'project'
-    },{
-      image:testImage,
-      name:'project'
-    },{
-      image:testImage,
-      name:'project'
-    },{
-      image:testImage,
-      name:'project'
-    },{
-      image:testImage,
-      name:'project'
+      projectName:'Perun',
+      image:perun,
+      address:'https://perunperun.netlify.com'
+    },
+    {
+      projectName:'Movie Zone',
+      image:movieZone,
+      address:'https://moviezonemovie.netlify.com'
+    },
+    {
+      projectName:'Real Estate',
+      image:realEstate,
+      address:'https://realestatereal.netlify.com'
+    },
+    {
+      projectName:'Cosmo Bakery',
+      image:cosmoBakery,
+      address:'https://cosmobakery.netlify.com'
+    },
+    {
+      projectName:'MIMS Muscle',
+      image:mimsMuscle,
+      address:'https://mimsmuscle.netlify.com'
+    },
+    {
+      projectName:'Cozy Hut',
+      image:cozyHut,
+      address:'https://cozy-hut.netlify.com/'
     },
   ]
 
@@ -119,41 +119,7 @@ return(
             </p>
             <Button to='#contact'>Contact Me</Button>
           </div>
-          <div className='technologies'>
-            <div className='technology'>
-
-            </div>
-            <div className='technology'>
-              
-            </div>
-            <div className='technology'>
-              
-            </div>
-            <div className='technology'>
-              
-            </div>
-            <div className='technology'>
-
-            </div>
-            <div className='technology'>
-              
-            </div>
-            <div className='technology'>
-              
-            </div>
-            <div className='technology'>
-              
-            </div>
-            <div className='technology'>
-
-            </div>
-            <div className='technology'>
-              
-            </div>
-            <div className='technology'>
-              
-            </div>
-          </div>
+          <Technologies />
         </Section>
       </VisibilitySensor>
       <VisibilitySensor partialVisibility={true} offset={{bottom:offset, top:offset}}  onChange={visibleThirdSection}>

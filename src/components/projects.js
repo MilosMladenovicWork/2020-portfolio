@@ -36,8 +36,10 @@ function Projects({projects}){
         onPointerOut={() => set({transform:`scale(1) rotateX(0deg) rotateY(0deg)`})}
         onMouseMove={function({clientX:x,clientY:y}){active === index && set({transform:`scale(1.2) rotateX(${-(y - window.innerHeight / 2) / 10}deg) rotateY(${(x - window.innerWidth / 2)/10}deg)`}); console.log(x)}}
         >
-        <img src={project.image}/>
-        <p>{project.name}</p>
+        <a href={project.address} target='_blank'>
+          <img src={project.image}/>
+          <p>{project.projectName}</p>
+        </a>
       </animated.div>)
     }
   </Swiper>

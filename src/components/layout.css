@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Coda&display=swap');
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -9,11 +11,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color:white;
-  font-family: "Coda";
+  font-family: "Coda", cursive;
 }
 
 h1,h2,h3,h4,h5,h6{
   margin:0;
+}
+
+::-webkit-scrollbar{
+  background:black;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#000082;
+  border-radius: 10px;
 }
 
 p{
