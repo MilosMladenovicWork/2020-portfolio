@@ -4,7 +4,7 @@ import './button.css'
 function Button({to:href, children, onClick, style}){
 
   return(
-    <a href={href} className="button" onClick={(e) => onClick(e)} style={style}>
+    <a href={href} className="button" onClick={onClick && ((e) => onClick(e))} style={style}>
       {children}
     </a>
   )
