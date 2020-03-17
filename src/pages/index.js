@@ -9,7 +9,6 @@ import Form from '../components/form'
 import Technologies from '../components/technologies'
 import VisibilitySensor from 'react-visibility-sensor'
 import 'swiper/css/swiper.css'
-
 import Layout from "../components/layout"
 import testImage from "../images/projects/perun.png"
 import perun from '../images/projects/perun.png'
