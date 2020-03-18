@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, {useState} from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -23,6 +23,8 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const [clickedMenu, setClickedMenu] = useState(false)
+
 
 
   return (
@@ -32,22 +34,25 @@ const Layout = ({ children }) => {
         <div>
           <nav>
             <ul>
-              <li>
+              <li onClick={() => setClickedMenu((prevState) => !prevState)} style={{textDecoration: clickedMenu && 'line-through'}}>
+                Menu
+              </li>
+              <li style={{display:clickedMenu ? 'block' : 'none'}} onClick={() => setClickedMenu((prevState) => !prevState)}>
                 <a href='#home'>
                   Home
                 </a>
               </li>
-              <li>
+              <li style={{display:clickedMenu ? 'block' : 'none'}} onClick={() => setClickedMenu((prevState) => !prevState)}>
                 <a href='#about'>
                   About Me
                 </a>
               </li>
-              <li>
+              <li style={{display:clickedMenu ? 'block' : 'none'}} onClick={() => setClickedMenu((prevState) => !prevState)}>
                 <a href='#projects'>
                   Projects
                 </a>              
               </li>
-              <li>
+              <li style={{display:clickedMenu ? 'block' : 'none'}} onClick={() => setClickedMenu((prevState) => !prevState)}>
                 <a href='#contact'>
                   Contact Me
                 </a>

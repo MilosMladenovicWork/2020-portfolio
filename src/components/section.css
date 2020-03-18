@@ -49,3 +49,24 @@ section p{
 .technology img{
   object-fit:contain;
 }
+
+@media (max-width:576px){
+  section h1{
+    font-size:40px;
+  }
+
+  .technologies{
+    width:50vw;
+    margin-top:10vh;
+    margin-left:0;
+  }
+
+  .technology{
+    width:35%;
+    height:auto;
+  }
+
+  .technology img{
+    width:100%;
+  }
+}

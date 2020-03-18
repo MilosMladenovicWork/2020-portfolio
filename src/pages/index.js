@@ -10,7 +10,6 @@ import Technologies from '../components/technologies'
 import VisibilitySensor from 'react-visibility-sensor'
 import 'swiper/css/swiper.css'
 import Layout from "../components/layout"
-import testImage from "../images/projects/perun.png"
 import perun from '../images/projects/perun.png'
 import movieZone from '../images/projects/moviezone.png'
 import realEstate from '../images/projects/realestate.png'
@@ -99,7 +98,7 @@ return(
 
         <VisibilitySensor onChange={visibleFirstSection} offset={{bottom:offset, top:offset}} partialVisibility={true}>
           <Section id='home'>
-            <div class='centered'>
+            <div className='centered'>
               <h1>I CREATE STUNNING WEBSITES!</h1>
               <p>My name is Milos Mladenovic. I am a Front End Web developer with passion in building websites.
               </p>
@@ -111,8 +110,8 @@ return(
           </Section>
         </VisibilitySensor>
         <VisibilitySensor partialVisibility={true} offset={{bottom:offset, top:offset}}  onChange={visibleSecondSection}>
-          <Section id='about' style={{flexDirection:'row',alignItems:'flex-start',justifyContent:'space-between', paddingTop:'20vh'}}>
-            <div className='centered' style={{width:"30vw"}}>
+          <Section id='about' style={{flexDirection:window.innerWidth >= 576 ? 'row' : 'column',alignItems:window.innerWidth >= 576 && 'flex-start',justifyContent:'space-between', paddingTop:'20vh'}}>
+            <div className='centered' style={{width:window.innerWidth >= 576 && "30vw"}}>
               <h1>ABOUT ME</h1>
               <p>This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. 
               This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. This is small sample text. 
@@ -123,7 +122,7 @@ return(
           </Section>
         </VisibilitySensor>
         <VisibilitySensor partialVisibility={true} offset={{bottom:offset, top:offset}}  onChange={visibleThirdSection}>
-          <Section id='projects' style={{flexDirection:'column', justifyContent:'flex-start',alignItems:'flex-start', paddingTop:'20vh'}}>
+          <Section id='projects' style={{flexDirection:'column', justifyContent:'flex-start',alignItems:window.innerWidth <= 576 ? 'center' : 'flex-start', paddingTop:'20vh', minHeight:'0'}}>
                 <h1 style={{marginBottom:'10vh'}}>MY PROJECTS</h1>
                 <div style={{width:'100%'}}>
                   <Projects projects={projects}/>

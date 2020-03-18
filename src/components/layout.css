@@ -4,6 +4,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -39,6 +40,7 @@ nav{
 
 nav ul{
   list-style: none;
+  margin:0 0;
 }
 
 a{
@@ -47,7 +49,7 @@ a{
 }
 
 nav ul a{
-  padding:5px;
+  padding:5px 0;
   padding-right:0;
   display:inline-block;
   width:100%;
@@ -62,4 +64,21 @@ footer{
   display:flex;
   align-items: center;
   justify-content: center;
+}
+
+nav ul li:first-child{
+  display:none;
+}
+
+@media (max-width:576px){
+  nav ul li {
+    display:none;
+  }
+  nav ul li:first-child{
+    display:block !important;
+    text-align: right;
+  }
+  nav{
+    top:61px;
+  }
 }
