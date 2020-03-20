@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Nav from '../components/nav'
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -22,49 +23,14 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
-  const [clickedMenu, setClickedMenu] = useState(false)
-
-
-
+  
   return (
     <div style={{overflowX:'hidden'}}>
-      <div>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
-          <nav>
-            <ul>
-              <li onClick={() => setClickedMenu((prevState) => !prevState)} style={{textDecoration: clickedMenu && 'line-through'}}>
-                Menu
-              </li>
-              <li style={{display:clickedMenu ? 'block' : 'none'}} onClick={() => setClickedMenu((prevState) => !prevState)}>
-                <a href='#home'>
-                  Home
-                </a>
-              </li>
-              <li style={{display:clickedMenu ? 'block' : 'none'}} onClick={() => setClickedMenu((prevState) => !prevState)}>
-                <a href='#about'>
-                  About Me
-                </a>
-              </li>
-              <li style={{display:clickedMenu ? 'block' : 'none'}} onClick={() => setClickedMenu((prevState) => !prevState)}>
-                <a href='#projects'>
-                  Projects
-                </a>              
-              </li>
-              <li style={{display:clickedMenu ? 'block' : 'none'}} onClick={() => setClickedMenu((prevState) => !prevState)}>
-                <a href='#contact'>
-                  Contact Me
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()} Milos Mladenovic
-          </footer>
-        </div>
-      </div>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <main>{children}</main>
+      <footer>
+        © {new Date().getFullYear()} Milos Mladenovic
+      </footer>
     </div>
   )
 }

@@ -14,6 +14,10 @@ body {
   font-family: "Coda", cursive;
 }
 
+*{
+  box-sizing: border-box;
+}
+
 h1,h2,h3,h4,h5,h6{
   margin:0;
 }
@@ -31,32 +35,10 @@ p{
   margin:0;
 }
 
-nav{
-  position:fixed;
-  right:50px;
-  top:50px;
-  z-index:1;
-}
-
-nav ul{
-  list-style: none;
-  margin:0 0;
-}
 
 a{
   color:white;
   text-decoration: none;
-}
-
-nav ul a{
-  padding:5px 0;
-  padding-right:0;
-  display:inline-block;
-  width:100%;
-}
-
-a:hover{
-  background-color:#03264c;
 }
 
 footer{
@@ -64,21 +46,4 @@ footer{
   display:flex;
   align-items: center;
   justify-content: center;
-}
-
-nav ul li:first-child{
-  display:none;
-}
-
-@media (max-width:576px){
-  nav ul li {
-    display:none;
-  }
-  nav ul li:first-child{
-    display:block !important;
-    text-align: right;
-  }
-  nav{
-    top:61px;
-  }
 }

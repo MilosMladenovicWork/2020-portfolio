@@ -1,0 +1,29 @@
+
+nav ul{
+  list-style: none;
+  margin:0 0;
+}
+
+nav ul a{
+  padding:5px 0;
+  padding-right:0;
+  display:inline-block;
+  width:100%;
+}
+
+a:hover{
+  background-color:#03264c;
+}
+
+@media (max-width:576px){
+  nav ul li {
+    display:none;
+  }
+  nav ul li:first-child{
+    display:block !important;
+    text-align: right;
+  }
+  nav{
+    top:61px;
+  }
+}

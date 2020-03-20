@@ -1,7 +1,12 @@
 header{
-  padding: 50px;
   position:fixed;
+  padding:50px;
+  width:100%;
   top:0;
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index:1;
 }
 
 header h1{

@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, {useRef, useMemo} from 'react'
+import React, {useRef, useMemo, useState, useEffect} from 'react'
 import {useThree, useFrame} from 'react-three-fiber'
 import {animated} from 'react-spring/three'
 
@@ -7,6 +7,7 @@ function Swarm({count, mouse, color}) {
 
   const mesh = useRef()
   const light = useRef()
+  const [mobile, setMobile] = useState(false)
   const { size, viewport } = useThree()
   const aspect = size.width / viewport.width
 
@@ -54,11 +55,17 @@ function Swarm({count, mouse, color}) {
     mesh.current.instanceMatrix.needsUpdate = true
   })
 
+  useEffect(() => {
+    if(window.innerWidth <= 1200){
+      setMobile(true)
+    }
+  }, [])
+
   return (
     <>
       <pointLight ref={light} distance={40} intensity={8} color="lightblue">
         <mesh>
-          <sphereBufferGeometry attach="geometry" args={[3.5, 32, 32]} />
+          <sphereBufferGeometry attach="geometry" args={mobile ? [0, 0, 0] : [3.5, 32, 32]} />
           <meshBasicMaterial attach="material" color="lightblue" />
         </mesh>
       </pointLight>
