@@ -1,8 +1,10 @@
 #about{
   flex-direction: row;
   align-items: flex-start;
-  margin-top:25vh;
+  padding-top:20vh;
+  margin-top:5vh;
 }
+
 
 @media (max-width:576px){
   #about{

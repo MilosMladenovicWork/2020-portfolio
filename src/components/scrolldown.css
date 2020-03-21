@@ -1,0 +1,6 @@
+.scroll-down{
+  position:absolute;
+  bottom:0;
+  display:flex;
+  flex-direction: column;
+}

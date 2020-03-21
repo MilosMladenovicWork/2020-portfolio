@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react'
+import {useSpring, animated} from 'react-spring'
 import VisibilitySensor from 'react-visibility-sensor'
 
-function VisibilityContainer({children, onChange}){
+function VisibilityContainer({children, onChange, thisSection, section}){
 
   const [offset, setOffset] = useState(0)
+  const springDissapear = useSpring({opacity:section === thisSection ? 1 : 0})
 
   useEffect(() => {
     setOffset(window.innerHeight / 2)
@@ -11,7 +13,9 @@ function VisibilityContainer({children, onChange}){
 
   return(
     <VisibilitySensor onChange={onChange} offset={{bottom:offset, top:offset}} partialVisibility={true}>
-      {children}
+      <animated.div style={springDissapear}>
+        {children}
+      </animated.div>
     </VisibilitySensor>
   )
 }

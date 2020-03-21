@@ -3,9 +3,9 @@ import VisibilityContainer from '../components/visibilitycontainer'
 import Section from '../components/section'
 import Form from '../components/form'
 
-function ContactArea({onChange}){
+function ContactArea({onChange, section}){
   return(
-    <VisibilityContainer onChange={onChange}>
+    <VisibilityContainer onChange={onChange} section={section} thisSection={3}>
       <Section id='contact'>
         <div className='centered'>
           <h1 style={{marginBottom:'10vh', textAlign:'center'}}>CONTACT ME</h1>

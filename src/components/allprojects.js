@@ -13,7 +13,7 @@ import mimsMuscle from '../images/projects/mimsmuscle.png'
 import cozyHut from '../images/projects/cozyhut.png'
 
 
-function AllProjects({onChange}){
+function AllProjects({onChange, section}){
 
   const projects = [
     {
@@ -49,7 +49,7 @@ function AllProjects({onChange}){
   ]
 
   return(
-    <VisibilityContainer onChange={onChange}>
+    <VisibilityContainer onChange={onChange} section={section} thisSection={2}>
       <Section id='projects'>
             <h1 style={{marginBottom:'10vh'}}>MY PROJECTS</h1>
             <div style={{width:'100%'}}>

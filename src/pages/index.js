@@ -53,10 +53,10 @@ return(
     <Layout>
       <SEO title="Home" />
       <Background mouse={mouse} color={color}/>
-      <Home onChange={visibleFirstSection}/>
-      <About onChange={visibleSecondSection} />
-      <AllProjects onChange={visibleThirdSection}/>
-      <ContactArea onChange={visibleFourthSection}/>
+      <Home onChange={visibleFirstSection} section={section}/>
+      <About onChange={visibleSecondSection} section={section}/>
+      <AllProjects onChange={visibleThirdSection} section={section}/>
+      <ContactArea onChange={visibleFourthSection} section={section}/>
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   </div>

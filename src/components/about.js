@@ -5,9 +5,9 @@ import Button from '../components/button'
 import Technologies from '../components/technologies'
 import './about.css'
 
-function About({onChange}){
+function About({onChange, section}){
   return(
-    <VisibilityContainer onChange={onChange}>
+    <VisibilityContainer onChange={onChange} section={section} thisSection={1}>
       <Section id='about'>
         <div className='centered'>
           <h1>ABOUT ME</h1>
