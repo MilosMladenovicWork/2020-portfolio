@@ -1,27 +1,27 @@
 import React from 'react'
 import './nav.css'
 
-function Nav() {
+function Nav({open, setOpen}) {
   return(
-    <nav>
+    <nav className={open ? 'visible' : 'notVisible'}>
       <ul>
         <li>
-          <a href='#home'>
+          <a href='#home' onClick={() => setOpen(false)}>
             Home
           </a>
         </li>
         <li>
-          <a href='#about'>
+          <a href='#about' onClick={() => setOpen(false)}>
             About Me
           </a>
         </li>
         <li>
-          <a href='#projects'>
+          <a href='#projects' onClick={() => setOpen(false)}>
             Projects
           </a>              
         </li>
         <li>
-          <a href='#contact'>
+          <a href='#contact' onClick={() => setOpen(false)}>
             Contact Me
           </a>
         </li>

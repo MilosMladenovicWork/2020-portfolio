@@ -38,7 +38,7 @@
   background: none;
 }
 
-@media (max-width: 576px){
+@media (max-width: 1200px){
   .swiper-slide{
     width:100% !important;
   }

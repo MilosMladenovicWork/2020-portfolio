@@ -15,15 +15,51 @@ a:hover{
   background-color:#03264c;
 }
 
-@media (max-width:576px){
-  nav ul li {
-    display:none;
+.visible, .notVisible{
+  opacity:1;
+}
+
+@media (max-width:1200px){
+  nav{
+    top:85px;
+    position:absolute;
+    right:50px;
+    transition:0.2s;
+    overflow:hidden;
   }
-  nav ul li:first-child{
-    display:block !important;
+  nav ul li{
     text-align: right;
   }
-  nav{
-    top:61px;
+
+  .visible{
+    animation-name:appear;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+  }
+
+  .notVisible{
+    animation-name:dissappear;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes appear{
+    0%{
+      opacity:0;
+      display:block;
+    }
+    100%{
+      opacity:1;
+      display:block;
+    }
+  }
+  @keyframes dissappear{
+    90%{
+      opacity:0;
+    }
+    100%{
+      opacity:0;
+      display:none;
+    }
   }
 }

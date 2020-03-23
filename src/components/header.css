@@ -9,6 +9,19 @@ header{
   z-index:1;
 }
 
+#menu{
+  display:none;
+}
+
 header h1{
   font-size:32px;
+}
+
+@media (max-width:1200px){
+  header{
+    align-items:center;
+  }
+  #menu{
+    display:inline-block;
+  }
 }
